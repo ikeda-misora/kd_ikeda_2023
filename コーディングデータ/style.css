@@ -1,0 +1,1442 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#slider {
+    width: 100%;
+    height: 700px;
+}
+
+#header{
+    position: relative;
+}
+
+ #header .logo{
+     font-family: Impact, 'Arial Narrow Bold', sans-serif;
+     font-size: 40px;
+     color: #fff;
+     /*position: absolute;
+     bottom: 348px;
+     left: 641px;*/
+     align-items: center;
+     text-align: center;
+     margin-top: -368px;
+ }
+
+ /* スクロールバー */
+ #header .scroll{
+    position:absolute;
+    left:50%;
+    bottom: -319px;
+ }
+
+ #header .scroll p {
+    position: absolute;
+    top: 50%;
+    left:-18px;
+    color: #fff;
+    letter-spacing: .15em;
+    font-family: "Impact";
+    font-size: 12px;
+}
+
+#header .scroll p {
+    margin-top: -80px;
+}
+
+#header .scroll > div {
+    position: relative;
+    width: 1px;
+    height: 100px;
+    background-color: #979797;
+    overflow: hidden;
+}
+
+#header .scroll > div::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    background-color: #fff;
+    animation: scroll 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll{
+    0%{
+        height: 0;
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    50%{
+        height: 50px;
+        opacity: 1;
+    }
+    100%{
+        height: 0;
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+/* メニューバー */
+#menubar{
+    height: 319px;
+}
+
+/* オンラインショップボタン */
+#menubar .onlineshopbutton{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #153b34;
+    margin-top: 325px;
+    margin-left: 83.5px;
+    position: relative;
+    display: inline-block;
+    background:#e7b326;
+    padding: 4px 48px 4px 32px;
+    border-radius: 50px;
+    text-align: center;
+    outline: none;
+    transition: ease .2s;
+}
+
+#menubar .onlineshopbutton::after{
+    content: '';
+    position: absolute;
+    top:42%;
+    right: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #153b34;
+    border-right: 2px solid #153b34;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+#menubar .onlineshopbutton:hover::after{
+    right: 20px;
+}
+
+/* メニュー */
+#menubar .menu{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 489px;
+    margin-top: -40px;
+}
+
+#menubar .menu li a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+}
+
+#menubar .menu li{
+    margin-bottom:20px;
+}
+
+#menubar .menu .TOP,
+#menubar .menu .product,
+#menubar .menu .creator,
+#menubar .menu .Achievement,
+#menubar .menu .news{
+    margin-right: 50px;
+}
+
+#menubar .menu li a:hover{
+  color:#153b34;
+}
+
+#menubar .menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 50%;
+    background:#153b34;
+    transition: all .3s;
+    transform: scale(0.04, 1);
+    transform-origin:center bottom;
+}
+
+#menubar .menu li a:hover::after {
+    height: 2px;
+    border-radius: 0;    
+    transform: scale(0.8, 1);
+}
+
+/* 製品の特徴 */
+/* 写真 */
+#features .img{
+    margin-top: 180px;
+}
+
+#features .img .i-front{
+    margin-top: -80px;
+    margin-left: 350px;
+}
+
+#features .img {
+    transition: 0.8s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  #features .img.on {
+    transform: translateY(0);
+    opacity: 1.0;
+  }
+
+/* タイトル */
+#features .title .s-title{
+    font-family: Impact;
+    font-size: 14px;
+    margin-left: 693px;
+    margin-top: -560px;
+}
+
+#features .title .m-title{
+    font-family: A-OTF 太ゴB101 Pr6;
+    font-size: 30px;
+    color: #35738a;
+    margin-left: 690px;
+}
+
+/* 本文 */
+#features .text{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: lighter;
+    font-size: 16px;
+    margin-left: 690px;
+}
+
+/* 特徴三つ */
+#features .threefeatures{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 685px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+#features .threefeatures .number{
+    font-family: Futura;
+    font-weight: bold;
+    font-size: 60px;
+    color: #fff;
+    margin-right: 60px;
+    margin-top: -63px;
+}
+
+#features .threefeatures .f-three .number{
+    margin-left: 65px;
+}
+
+#features .threefeatures .circle{
+    display: inline-block;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: #1d4e44;
+    font-family: A-OTF 太ゴB101 Pr6;
+    font-size: 20px;
+    color: #fff;
+    line-height: 190px;
+}
+
+#features .threefeatures .f-one .circle,
+#features .threefeatures .f-two .circle{
+    margin-right: 65px;
+}
+
+/* オンラインショップを見る */
+#features .onlineshopbutton{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #1d4e44;
+    margin-top: 67px;
+    margin-left: 867px;
+    position: relative;
+    display: inline-block;
+    background:#e7b326;
+    padding: 4px 48px 4px 32px;
+    border-radius: 50px;
+    text-align: center;
+    outline: none;
+    transition: ease .2s;
+}
+
+#features .onlineshopbutton::after{
+    content: '';
+    position: absolute;
+    top:42%;
+    right: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #153b34;
+    border-right: 2px solid #153b34;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+#features .onlineshopbutton:hover::after{
+    right: 20px;
+}
+
+/* 製品紹介 */
+/* タイトル */
+#product .title{
+    text-align: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+#product .title .s-title{
+    font-family: Impact;
+    font-size: 14px;
+}
+
+#product .title .m-title{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 36px;
+    color: #35738a;
+}
+
+/* 製品写真 */
+#product .img{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 132px;
+}
+
+#product .img .left{
+    margin-left: 124px;
+    margin-right: 158px;
+}
+
+#product .img .center{
+    margin-right: 141px;
+}
+
+/* 製品名と値段 */
+#product .name-price{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 70px;
+    margin-left: 115px;
+}
+
+#product .name-price .syoumei, 
+#product .name-price .chair, 
+#product .name-price .zakka{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#product .name-price .syoumei, 
+#product .name-price .chair{
+    margin-right: 150px;
+}
+
+#product .name-price .syoumei .n-syoumei, 
+#product .name-price .chair .n-chair,
+#product .name-price .zakka .n-zakka{
+    font-family: A-OTF 太ゴB101 Pr6;
+    font-size: 20px;
+    color: #35738a;
+}
+
+#product .name-price .syoumei .p-syoumei1,
+#product .name-price .syoumei .p-syoumei2,
+#product .name-price .chair .p-chair1,
+#product .name-price .chair .p-chair2,
+#product .name-price .zakka .p-zakka1,
+#product .name-price .zakka .p-zakka2{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: -10px;
+}
+
+#product .name-price .syoumei .p-syoumei1,
+#product .name-price .chair .p-chair1,
+#product .name-price .zakka .p-zakka1{
+    margin-left: 100px;
+    margin-right: 70px;
+}
+
+#product .name-price .syoumei .p-syoumei1::after,
+#product .name-price .chair .p-chair1::after{
+    content: "";
+    display: block;
+    background-color: #000;
+    width: 35px;
+    height: 1px;
+    position: absolute;
+    margin-left: 57px;
+    margin-top: -9px;
+}
+
+#product .name-price .zakka .p-zakka1::after{
+    content: "";
+    display: block;
+    background-color: #000;
+    width: 35px;
+    height: 1px;
+    position: absolute;
+    margin-left: 49px;
+    margin-top: -9px;
+}
+
+/* 製品説明 */
+#product .text{
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 115px;
+}
+
+#product .text .left{
+    margin-right: 147px;
+}
+
+#product .text .center{
+    margin-right: 161px;
+}
+
+/* ショップを見るボタン */
+#product .shop{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #153b34;
+    margin-top: 50px;
+    margin-left: 125px;
+}
+
+#product .shop .left,
+#product .shop .center{
+    margin-right: 160px;
+}
+
+#product .shop .left,
+#product .shop .center,
+#product .shop .right{
+    position: relative;
+    display: inline-block;
+    background:#e7b326;
+    padding: 6px 80px 6px 80px;
+    border-radius: 50px;
+    text-align: center;
+    outline: none;
+    transition: ease .2s;
+}
+
+#product .shop .left::after,
+#product .shop .center::after,
+#product .shop .right::after{
+    content: '';
+    position: absolute;
+    top:42%;
+    right: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #153b34;
+    border-right: 2px solid #153b34;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+#product .shop .left:hover::after,
+#product .shop .center:hover::after,
+#product .shop .right:hover::after{
+    right: 20px;
+}
+
+/* 作り手の紹介 */
+/* タイトル */
+#creator .title{
+    text-align: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+#creator .title .s-title{
+    font-family: Impact;
+    font-size: 14px;
+}
+
+#creator .title .m-title{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 36px;
+    color: #35738a;
+}
+
+/* 作り手の紹介 */
+#creator{
+    background: linear-gradient(to bottom, #fff 0%, #fff 30%, #153b34 30%,  #153b34 100%);
+}
+
+#creator .main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 生徒 */
+/* 写真 */
+#creator .img{
+    margin-left: 135px;
+    margin-top: 77px;
+    position: relative;
+    transition: 0.8s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+    z-index: 5;
+}
+
+#creator .img.on {
+    transform: translateY(0);
+    opacity: 1.0;
+  }
+
+
+#creator .main .student .text1{
+    font-family: Impact;
+    font-size: 30px;
+    color: #fff;
+    margin-left: 135px;
+    margin-top: -69px;
+    padding: 13px 32px 13px 32px;
+    background-color: #153b34;
+    width: 113px;
+    position: absolute;
+    z-index: 50;
+}
+
+/* 紹介文 */
+#creator .main .student .text2{
+    font-family: A-OTF 太ゴB101 Pr6;
+    font-size: 24px;
+    color: #fff;
+    margin-left: 135px;
+}
+
+#creator .main .student .text3{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 140px;
+}
+
+/* 指導者 */
+/* 写真 */
+#creator .main .teacher{
+    margin-left: -80px;
+}
+
+#creator .main .teacher .img{
+    z-index: 5;
+}
+
+#creator .main .teacher .text1{
+    font-family: Impact;
+    font-size: 30px;
+    color: #fff;
+    margin-left: 135px;
+    margin-top: -69px;
+    padding: 13px 32px 13px 32px;
+    background-color: #153b34;
+    width: 113px;
+    position: absolute;
+    z-index: 50;
+}
+
+/* 紹介文 */
+#creator .main .teacher .text2{
+    font-family: A-OTF 太ゴB101 Pr6;
+    font-size: 24px;
+    color: #fff;
+    margin-left: 135px;
+}
+
+#creator .main .teacher .text3{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 140px;
+}
+
+/* 一覧を見る */
+#creator .button{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 95px;
+    margin-left: 580px;
+    margin-bottom: 53px;
+    border: 1px solid #fff;
+    position: relative;
+    display: inline-block;
+    background: #153b34;
+    padding: 6px 80px 6px 80px;
+    border-radius: 50px;
+    text-align: center;
+    outline: none;
+    transition: ease .2s
+}
+
+#creator .button::after{
+    content: '';
+    position: absolute;
+    top:42%;
+    right: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+#creator .button:hover::after{
+    right: 20px;
+}
+
+/* 実績の紹介 */
+/* タイトル */
+#achievement .title{
+    text-align: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+#achievement .title .s-title{
+    font-family: Impact;
+    font-size: 14px;
+}
+
+#achievement .title .m-title{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 36px;
+    color: #35738a;
+}
+
+/* 実績の内容 */
+#achievement .main{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background: linear-gradient(to bottom, #fff 0%, #fff 30%, #e7b326 30%,  #e7b326 100%);
+}
+
+/* オープンキャンパスでの活用 */
+#achievement .main .opencampus{
+    margin-left: 40px;
+    position: relative;
+    transition: 0.8s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+#achievement .main .opencampus.on {
+    transform: translateY(0);
+    opacity: 1.0;
+  }
+
+#achievement .main .opencampus .button{
+    font-family: A-OTF 太ゴB101 Pr6;
+    font-size: 18px;
+    color: #fff;
+    margin-top: -6px;
+    position: relative;
+    display: inline-block;
+    background: #153b34;
+    padding: 15px 85px 15px 21px;
+    text-align: center;
+    outline: none;
+    transition: ease .2s
+}
+
+#achievement .main .opencampus .button::after{
+    content: '';
+    position: absolute;
+    top:42%;
+    right: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+#achievement .main .opencampus .button:hover::after{
+    right: 20px;
+}
+
+/* 実際の店舗での販売 */
+#achievement .main .sale{
+    margin-left: 50px;
+    margin-left: 40px;
+    position: relative;
+    transition: 0.8s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+#achievement .main .sale.on {
+    transform: translateY(0);
+    opacity: 1.0;
+  }
+
+#achievement .main .sale .button{
+    font-family: A-OTF 太ゴB101 Pr6;
+    font-size: 18px;
+    color: #fff;
+    margin-top: -6px;
+    position: relative;
+    display: inline-block;
+    background: #153b34;
+    padding: 15px 157px 15px 21px;
+    text-align: center;
+    outline: none;
+    transition: ease .2s
+}
+
+#achievement .main .sale .button::after{
+    content: '';
+    position: absolute;
+    top:42%;
+    right: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+#achievement .main .sale .button:hover::after{
+    right: 20px;
+}
+
+/* 通信販売 */
+#achievement .main .online{
+    margin-left: 50px;
+    margin-left: 40px;
+    position: relative;
+    transition: 0.8s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+#achievement .main .online.on {
+    transform: translateY(0);
+    opacity: 1.0;
+  }
+
+#achievement .main .online .button{
+    font-family: A-OTF 太ゴB101 Pr6;
+    font-size: 18px;
+    color: #fff;
+    margin-top: -6px;
+    position: relative;
+    display: inline-block;
+    background: #153b34;
+    padding: 15px 247px 15px 21px;
+    text-align: center;
+    outline: none;
+    transition: ease .2s
+}
+
+#achievement .main .online .button::after{
+    content: '';
+    position: absolute;
+    top:42%;
+    right: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+#achievement .main .online .button:hover::after{
+    right: 20px;
+}
+
+/* 一覧を見る */
+#achievement .button2{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 95px;
+    margin-left: 475px;
+    margin-bottom: 53px;
+    position: relative;
+    display: inline-block;
+    background: #153b34;
+    padding: 6px 80px 6px 80px;
+    border-radius: 50px;
+    text-align: center;
+    outline: none;
+    transition: ease .2s
+}
+
+#achievement .button2::after{
+    content: '';
+    position: absolute;
+    top:42%;
+    right: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+#achievement .button2:hover::after{
+    right: 20px;
+}
+
+/* 写真スライダー */
+.picture img {
+    margin-top: 165px;
+    width:100%;
+    height:auto;
+}
+
+/* ニュース */
+/* タイトル */
+#news .title{
+    text-align: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+#news .title .s-title{
+    font-family: Impact;
+    font-size: 14px;
+}
+
+#news .title .m-title{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 36px;
+    color: #35738a;
+}
+
+/* 本文 */
+#news .main{
+    margin-top: 35px;
+    margin-left: 425px;
+}
+
+dl{
+    width: 650px;
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+   }
+   dt{
+    font-size: 18px;
+    border-bottom:1px solid #000;
+    float:left;
+    padding:10px 5px;
+   }
+   dd{
+    font-size: 18px;
+    border-bottom:1px solid #000;
+    padding:10px 80px 10px 5px;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    transition: ease .2s
+   }
+   dd::after{
+    content: '';
+    position: absolute;
+    top: 43%;
+    right: -10px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #153b34;
+    border-right: 2px solid #153b34;
+    transform: rotate(45deg);
+    transition: all .3s;
+   }
+   dd:hover::after{
+    right: -20px;
+   }
+   #news .main a{
+    font-size: 10px;
+    background-color: #153b34;
+    border-radius: 30px;
+    color:#fff;
+    margin:0 20px;
+    padding:5px 15px;
+    text-decoration:none;
+   }
+
+/* 一覧を見る */
+#news .button{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 95px;
+    margin-left: 585px;
+    margin-bottom: 53px;
+    position: relative;
+    display: inline-block;
+    background: #153b34;
+    padding: 6px 80px 6px 80px;
+    border-radius: 50px;
+    text-align: center;
+    outline: none;
+    transition: ease .2s
+}
+
+#news .button::after{
+    content: '';
+    position: absolute;
+    top:42%;
+    right: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+#news .button:hover::after{
+    right: 20px;
+}
+
+/* Blog and Topics */
+/* タイトル */
+#b-t .title{
+    font-family: Impact;
+    font-size: 40px;
+    color: #35738a;
+    text-align: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+/* メインスライダー */
+#b-t .main {
+    width:94%;
+    margin:0 auto;
+    margin-top: 50px;       
+ }
+
+ #b-t .main .slick-slide {
+    margin:0 10px;
+}
+
+.slick-dots {
+    text-align:center;
+    margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+    margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    border: 1px solid #153b34;
+    background: #fff;;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#153b34;/*ドットボタンの現在地表示の色*/
+}
+
+/* 1 */
+#b-t .main .first{
+    background-color: #e7b326;
+    width: 410px;
+    height: 440px;
+}
+
+#b-t .main .first .img{
+    text-align: center;
+    padding-top: 32px;
+    margin-left: 40px;
+}
+
+#b-t .main .first .text1{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 24px;
+    color: #153b34;
+    padding-left: 48px;
+}
+
+#b-t .main .first .text2{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 12px;
+    color: #153b34;
+    padding-left: 50px;
+}
+
+#b-t .main .first .text3{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #153b34;
+    line-height: 17px;
+    width: 38px;
+    border-bottom: 1px solid #153b34;
+    margin-left: 320px;
+    margin-top: -25px;
+}
+
+/* 2 */
+#b-t .main .second{
+    background-color: #e7b326;
+    width: 410px;
+    height: 440px;
+}
+
+#b-t .main .second .img{
+    text-align: center;
+    padding-top: 32px;
+    margin-left: 40px;
+}
+
+#b-t .main .second .text1{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 24px;
+    color: #153b34;
+    padding-left: 48px;
+}
+
+#b-t .main .second .text2{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 12px;
+    color: #153b34;
+    padding-left: 50px;
+}
+
+#b-t .main .second .text3{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #153b34;
+    line-height: 17px;
+    width: 38px;
+    border-bottom: 1px solid #153b34;
+    margin-left: 320px;
+    margin-top: -25px;
+}
+
+/* 3 */
+#b-t .main .third{
+    background-color: #e7b326;
+    width: 410px;
+    height: 440px;
+}
+
+#b-t .main .third .img{
+    text-align: center;
+    padding-top: 32px;
+    margin-left: 40px;
+}
+
+#b-t .main .third .text1{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 24px;
+    color: #153b34;
+    padding-left: 48px;
+}
+
+#b-t .main .third .text2{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 12px;
+    color: #153b34;
+    padding-left: 50px;
+}
+
+#b-t .main .third .text3{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #153b34;
+    line-height: 17px;
+    width: 38px;
+    border-bottom: 1px solid #153b34;
+    margin-left: 320px;
+    margin-top: -25px;
+}
+
+/* 一覧を見る */
+#b-t .button{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 95px;
+    margin-left: 585px;
+    margin-bottom: 53px;
+    position: relative;
+    display: inline-block;
+    background: #153b34;
+    padding: 6px 80px 6px 80px;
+    border-radius: 50px;
+    text-align: center;
+    outline: none;
+    transition: ease .2s
+}
+
+#b-t .button::after{
+    content: '';
+    position: absolute;
+    top:42%;
+    right: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+#b-t .button:hover::after{
+    right: 20px;
+}
+
+/* オンラインショップ */
+#onlineshop{
+    margin-top: 130px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#onlineshop .t-area{
+    background-color: #153b34;
+    margin-bottom: 6px;
+}
+
+#onlineshop .t-area .text1{
+    font-family: Impact;
+    font-size: 60px;
+    color: #fff;
+    margin-top: 69px;
+    padding: 0 209px 0 190px ;
+}
+
+#onlineshop .t-area .text2{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 38px;
+    margin-left: 125px;
+}
+
+#onlineshop .t-area .button{
+    margin-top: 60px;
+    margin-left: 170px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+  #onlineshop .t-area .button .text:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background:#fff;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
+  }
+
+  #onlineshop .t-area .button .text span {
+    position: relative;
+    z-index: 3;
+    color:#153b34;
+  }
+  
+  #onlineshop .t-area .button .text:hover span{
+    color:#153b34;
+  }
+
+  #onlineshop .t-area .button .text:hover:before{
+    transform-origin:left top;
+    transform:scale(1, 1);
+  }
+  
+
+#onlineshop .t-area .button .text{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 20px;
+    color: #153b34;
+    background: #e7b326;
+    padding: 15px 95px 15px 95px;
+    display: inline-block;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: ease .2s;
+    z-index: 5;
+}
+
+#onlineshop .t-area .button .icon{
+    margin-left: 65px;
+    margin-top: 3px;
+    position: absolute;
+    z-index: 50;
+}
+
+#onlineshop .t-area .button .yajirusi{
+    margin-left: 295px;
+    margin-top: 8px;
+    position: absolute;
+    z-index: 50;
+}
+
+/* 製品の小さい写真 */
+#m-p .m-picture{
+    list-style: none;
+    margin-top: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 170px;
+}
+
+#m-p .m-picture .m-p-1,
+#m-p .m-picture .m-p-2,
+#m-p .m-picture .m-p-3,
+#m-p .m-picture .m-p-4,
+#m-p .m-picture .m-p-5{
+    margin-right: 35px;
+}
+
+#m-p .m-picture {
+    transition: 1s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  
+#m-p .m-picture.on {
+    transform: translateY(0);
+    opacity: 1.0;
+  } 
+
+#m-p .m-picture .m-p-2 {
+    transition-delay: 0.2s;
+}
+
+#m-p .m-picture .m-p-3 {
+    transition-delay: 0.4s;}
+
+#m-p .m-picture .m-p-4 {
+    transition-delay: 0.6s;
+}
+
+#m-p .m-picture .m-p-5 {
+    transition-delay: 0.8s;
+}
+
+#m-p .m-picture .m-p-6 {
+    transition-delay: 1s;
+}
+
+/* フッター */
+#footer{
+    margin-top: 130px;
+    background-color: #153b34;
+}
+
+/* 一段目 */
+#footer .f-dan{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer .f-dan .logo{
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: #fff;
+    margin-left: 271px;
+    padding-top: 90px;
+}
+
+#footer .f-dan .icon{
+    margin-top: 93px;
+    margin-left: 80px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer .f-dan .icon .twitter,
+#footer .f-dan .icon .insta{
+    margin-right: 30px;
+}
+
+#footer .f-dan .icon .twitter,
+#footer .f-dan .icon .insta,
+#footer .f-dan .icon .face{
+     transition: transform 0.4s ease;
+}
+
+#footer .f-dan .icon .twitter:hover,
+#footer .f-dan .icon .insta:hover,
+#footer .f-dan .icon .face:hover{
+    transform: scale(1.1);
+}
+
+#footer .f-dan .button{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    color: #1d4e44;
+    margin-top: 93px;
+    margin-left: 280px;
+    position: relative;
+    display: inline-block;
+    background:#e7b326;
+    padding: 6px 48px 4px 32px;
+    border-radius: 50px;
+    text-align: center;
+    outline: none;
+    transition: ease .2s;
+}
+
+#footer .f-dan .button::after{
+    content: '';
+    position: absolute;
+    top:42%;
+    right: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #153b34;
+    border-right: 2px solid #153b34;
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+#footer .f-dan .button:hover::after{
+    right: 20px;
+}
+
+/* 二段目 */
+#footer .menu{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 16px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 294px;
+    margin-top: 86px;
+}
+
+#footer .menu .TOP,
+#footer .menu .product,
+#footer .menu .creator,
+#footer .menu .Achievement,
+#footer .menu .news{
+    margin-right: 70px;
+}
+
+#footer .menu li{
+    margin-bottom:20px;
+}
+
+#footer .menu li a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+}
+
+#footer .menu li a:hover{
+    color: #e7b326;
+  }
+  
+  #footer .menu li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      border-radius: 50%;
+      background: #e7b326;;
+      transition: all .3s;
+      transform: scale(0.04, 1);
+      transform-origin:center bottom;
+  }
+  
+  #footer .menu li a:hover::after {
+      height: 2px;
+      border-radius: 0;    
+      transform: scale(0.8, 1);
+  }
+
+/* コピーライト */
+#footer .copy{
+    font-family: A P-OTF 秀英角ゴシック金 Std;
+    font-weight: bold;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    margin-top: 104px;
+    padding-bottom: 17px;
+}
